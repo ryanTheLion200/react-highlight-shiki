@@ -1,0 +1,8 @@
+<type>(scope): <description>
+
+# type: feat, fix, chore, refactor, docs, style, revert, test
+# scope (optional): e.g. react-highlight-shiki, codegen, ...
+# body (optional): explain what changed and why.
+# footer (optional): e.g. Refs: #123
+# Breaking change: add ! before the colon, e.g. feat(api)!: ...
+# and/or add a footer: BREAKING CHANGE: <description>

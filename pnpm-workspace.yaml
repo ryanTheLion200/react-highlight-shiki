@@ -1,0 +1,16 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+catalog:
+  shiki: ^4.5.0
+
+catalogs:
+  ts6:
+    typescript: ^6.0.3
+  ts7:
+    typescript: ^7.0.2
+  node24:
+    "@types/node": ^24.19.2
+  node26:
+    "@types/node": ^26.6.6

@@ -1,0 +1,25 @@
+{
+  "name": "react-highlight-shiki-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "version": "pnpm changeset version && pnpm install --no-frozen-lockfile"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^1.0.1",
+    "@changesets/cli": "^3.0.3",
+    "@types/node": "catalog:node24",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "typescript": "catalog:ts7",
+    "vitest": "^5.0.5"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.16.1",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.16.1"
+}
