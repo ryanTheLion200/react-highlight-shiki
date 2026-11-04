@@ -47,7 +47,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
-      contents: read
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -67,4 +68,3 @@ jobs:
         with:
           version-script: pnpm run version
           publish-script: pnpm exec changeset publish
-          github-token: ${{ secrets.CHANGESETS_TOKEN }}
