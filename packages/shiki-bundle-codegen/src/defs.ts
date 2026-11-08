@@ -2,7 +2,7 @@ import { bundledLanguagesInfo, bundledThemesInfo } from "shiki/bundle/full";
 
 // language
 
-const shikiGrammarLanguages = bundledLanguagesInfo.map(({ id }) => id);
+export const shikiGrammarLanguages = bundledLanguagesInfo.map(({ id }) => id);
 const shikiGrammarLanguageSet = new Set(shikiGrammarLanguages);
 
 export const ensureShikiGrammarLanguages = (langs: string[]) => {
@@ -56,7 +56,7 @@ export const shikiSpecialLanguageAliasMapping = {
 
 // theme
 
-const shikiGrammarThemes = bundledThemesInfo.map((info) => info.id);
+export const shikiGrammarThemes = bundledThemesInfo.map((info) => info.id);
 const shikiGrammarThemeSet = new Set(shikiGrammarThemes);
 
 export const ensureShikiGrammarThemes = (themes: string[]) => {
@@ -76,7 +76,7 @@ export const shikiSpecialThemes = ["none"];
 // engine
 
 const precompileEngines = ["javascript", "javascript-raw"];
-const shikiEngines = [...precompileEngines, "oniguruma"];
+export const shikiEngines = [...precompileEngines, "oniguruma"];
 
 export const ensureShikiEngine = (engine: string, { precompiled }: { precompiled: boolean }) => {
   if (!engine) throw new Error(`"engine" must be one of [${shikiEngines.join(", ")}]`);
