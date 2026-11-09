@@ -1,9 +1,10 @@
+import type { _ShikiBundleEngine, _ShikiGrammarLanguage, _ShikiGrammarTheme } from "../typing";
 import { CodeGeneratorBase, type CodeGeneratorFactory } from "./base";
 
 export interface ShikiBundleCodeGeneratorMeta {
-  langs: readonly string[];
-  themes: readonly string[];
-  engine: string;
+  langs: readonly _ShikiGrammarLanguage[];
+  themes: readonly _ShikiGrammarTheme[];
+  engine: _ShikiBundleEngine;
   precompiled: boolean;
   typescript: boolean;
   shorthands: boolean;

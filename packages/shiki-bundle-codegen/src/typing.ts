@@ -11,6 +11,20 @@ export type ReadonlyFields<T extends Record<any, any>> = {
   [K in keyof T as T[K] extends any[] ? never : T[K] extends ReadonlyArray<any> ? K : never]: T[K];
 };
 
+export type PickOptional<T extends Record<any, any>> = {
+  [K in keyof T as Pick<T, K> extends Required<Pick<T, K>> ? never : K]?: T[K];
+};
+
+export type NonArrayObject<T> = T extends readonly unknown[] | ((...args: any[]) => unknown)
+  ? never
+  : T extends object
+    ? T
+    : never;
+
+export type ObjectEntry<T extends object> = {
+  [K in keyof T]-?: { key: K; value: T[K] };
+}[keyof T];
+
 /** full grammar languages */
 export type _ShikiGrammarLanguage =
   | "abap"

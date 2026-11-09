@@ -1,4 +1,15 @@
+import type { _ShikiBundleEngine } from "./typing";
 import { bundledLanguagesInfo, bundledThemesInfo } from "shiki/bundle/full";
+
+export const shorthandFunctions = [
+  "codeToHtml",
+  "codeToHast",
+  "codeToTokensBase",
+  "codeToTokens",
+  "codeToTokensWithThemes",
+  "getSingletonHighlighter",
+  "getLastGrammarState",
+];
 
 // language
 
@@ -51,7 +62,6 @@ export const shikiSpecialLanguages = ["text", "ansi"];
 export const shikiSpecialLanguageAliasMapping = {
   txt: "text",
   plain: "text",
-  ansi: "ansi",
 };
 
 // theme
@@ -103,3 +113,28 @@ export const ensureShikiEngine = (engine: string, { precompiled }: { precompiled
 
   return engine;
 };
+
+export const engineModule = {
+  javascript: {
+    factory: {
+      name: "createJavaScriptRegexEngine",
+    },
+    from: "@shikijs/engine-javascript",
+  },
+  "javascript-raw": {
+    factory: {
+      name: "createJavaScriptRawEngine",
+    },
+    from: "@shikijs/engine-javascript/raw",
+  },
+  oniguruma: {
+    factory: {
+      name: "createOnigurumaEngine",
+      args: ['import("shiki/wasm")'],
+    },
+    from: "@shikijs/engine-oniguruma",
+  },
+} satisfies Record<
+  _ShikiBundleEngine,
+  { factory: { name: string; args?: string[] }; from: string }
+>;
