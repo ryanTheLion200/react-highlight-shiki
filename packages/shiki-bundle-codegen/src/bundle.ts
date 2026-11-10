@@ -155,7 +155,7 @@ export const shikiBundleCodegen = ({
   gen
     .line(
       ({ precompiled }) =>
-        `const bundledLanuages = ${objectLiteral(
+        `const bundledLanguages = ${objectLiteral(
           bundledLanguageMapping,
           ({ value: grammarLanguage }) =>
             `() => import("@shikijs/${precompiled ? "langs-precompiled" : "langs"}/${grammarLanguage}")`,

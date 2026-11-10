@@ -29,7 +29,9 @@
   },
   "scripts": {
     "dev": "tsdown --watch",
-    "build": "tsdown --minify"
+    "build": "tsdown --minify",
+    "test:watch": "vitest",
+    "test": "vitest run"
   },
   "dependencies": {
     "shiki": "catalog:"
