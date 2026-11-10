@@ -1,6 +1,6 @@
 {
   "name": "shiki-bundle-codegen",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Codegen for fine-grained Shiki bundles.",
   "license": "MIT",
   "author": "ryanTheLion200",
