@@ -1,1 +1,1 @@
-export { shikiBundleCodegen } from "./bundle";
+export { shikiBundleCodegen, type BundleOptions } from "./bundle";
