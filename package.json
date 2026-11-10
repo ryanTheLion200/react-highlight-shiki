@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "version": "pnpm changeset version && pnpm install --no-frozen-lockfile"
+    "version": "pnpm changeset version && pnpm install --no-frozen-lockfile",
+    "codegen:gen-types": "pnpm --filter shiki-bundle-codegen node ./scripts/gen-types.ts"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^3.0.3",
-    "@types/node": "catalog:node24",
+    "@types/node": "catalog:node26",
     "oxfmt": "^0.75.0",
     "oxlint": "^1.90.0",
     "typescript": "catalog:ts7",

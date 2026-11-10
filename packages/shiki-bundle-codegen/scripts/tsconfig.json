@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2025",
+    "lib": ["ES2025"],
+    "types": ["node"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["."]
+}

@@ -21,5 +21,5 @@ export default defineConfig({
       options: { embeddedLanguageFormatting: "off" },
     },
   ],
-  ignorePatterns: ["LICENSE"],
+  ignorePatterns: ["LICENSE", "packages/shiki-bundle-codegen/tests/__snapshots__/**"],
 });
