@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "version": "pnpm changeset version && pnpm install --no-frozen-lockfile",
-    "codegen:gen-types": "pnpm --filter shiki-bundle-codegen node ./scripts/gen-types.ts"
+    "codegen:gen-types": "pnpm --filter shiki-bundle-codegen node ./scripts/gen-types.ts",
+    "playground:react-shiki": "pnpm --dir playgrounds/react-highlight-shiki --ignore-workspace"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
